@@ -1,0 +1,6 @@
+{
+  "name": "CGZ Gamezone",
+  "description": "Urban Arcade & Snooker Destination showing games, location, and bookings.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

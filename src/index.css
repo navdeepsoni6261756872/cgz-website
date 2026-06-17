@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Play:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Play", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-brand-green: #0a1c13;
+  --color-brand-green-light: #163625;
+  --color-brand-gold: #d4af37;
+  --color-brand-gold-dark: #a67c00;
+}
+
+@layer utilities {
+  .text-neon-cgz {
+    color: transparent;
+    -webkit-text-stroke: 2px #00e5ff;
+    text-shadow: 0 0 10px rgba(0, 229, 255, 0.4), 0 0 20px rgba(0, 229, 255, 0.2);
+  }
+  
+  .text-neon-subtitle {
+    color: transparent;
+    -webkit-text-stroke: 1.5px #ff3333;
+    text-shadow: 0 0 10px rgba(255, 51, 51, 0.6);
+  }
+
+  .text-gold {
+    color: var(--color-brand-gold);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+  }
+
+  .gold-border-card {
+    background: rgba(10, 28, 19, 0.85); /* brand-green slightly transparent */
+    border: 2px solid var(--color-brand-gold-dark);
+    border-radius: 12px;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.9), 0 8px 24px rgba(0,0,0,0.6);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .gold-border-card::after {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    border: 1px solid rgba(212, 175, 55, 0.3); /* faint gold inner border */
+    border-radius: 8px;
+    pointer-events: none;
+  }
+  
+  .nav-link {
+    color: #a0a0a0;
+    transition: color 0.2s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.875rem;
+  }
+  
+  .nav-link:hover, .nav-link.active {
+    color: var(--color-brand-gold);
+  }
+
+  .rivet {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(135deg, #666, #222);
+    border: 1px solid #111;
+    border-radius: 50%;
+    box-shadow: inset 1px 1px 2px rgba(255,255,255,0.2), 1px 1px 3px rgba(0,0,0,0.8);
+    z-index: 10;
+  }
+}
