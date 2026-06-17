@@ -22,23 +22,23 @@ export default function App() {
   };
 
   return (
-    <div className="bg-brand-green min-h-screen text-white font-sans selection:bg-brand-gold selection:text-brand-green">
+    <div className="bg-brand-green-bg min-h-screen text-white font-sans selection:bg-brand-gold selection:text-brand-green">
       <Navbar currentView={currentView} onChangeView={setCurrentView} />
       
       <main>
         {renderView()}
       </main>
       
-      {/* Footer for non-location pages (since location has its own sticky footer) */}
+      {/* Universal Footer styling matching the screenshots perfectly */}
       {currentView !== 'location' && (
-        <footer className="w-full bg-brand-green border-t border-brand-green-light py-6 flex flex-col sm:flex-row justify-between items-center max-w-6xl mx-auto px-4 text-gray-500 text-sm font-sans z-50 relative">
+        <div className="fixed bottom-0 w-full bg-[#0a1f15] py-4 flex justify-between items-center px-8 text-[#666] text-xs font-sans border-t border-[#1b3d2b] shadow-inner z-50">
           <p>CGZ GAMEZONE & SNOOKER | © All Rights Reserved</p>
-          <div className="flex gap-4 mt-4 sm:mt-0">
-            <span className="w-6 h-6 rounded-full border border-gray-600 flex items-center justify-center cursor-pointer hover:border-gold hover:text-gold transition-colors font-bold lowercase">f</span>
-            <span className="w-6 h-6 rounded-full border border-gray-600 flex items-center justify-center cursor-pointer hover:border-gold hover:text-gold transition-colors font-bold lowercase">i</span>
-            <span className="w-6 h-6 rounded-full border border-gray-600 flex items-center justify-center cursor-pointer hover:border-gold hover:text-gold transition-colors font-bold lowercase">y</span>
+          <div className="flex gap-4">
+            <span className="w-6 h-6 rounded-full border border-[#555] flex items-center justify-center cursor-pointer hover:border-gold hover:text-gold transition-colors font-bold pb-0.5">f</span>
+            <span className="w-6 h-6 rounded-full border border-[#555] flex items-center justify-center cursor-pointer hover:border-gold hover:text-gold transition-colors font-bold">i</span>
+            <span className="w-6 h-6 rounded-full border border-[#555] flex items-center justify-center cursor-pointer hover:border-gold hover:text-gold transition-colors font-bold pb-0.5">y</span>
           </div>
-        </footer>
+        </div>
       )}
     </div>
   );

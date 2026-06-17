@@ -14,18 +14,18 @@ export const Navbar: React.FC<NavbarProps> = ({ currentView, onChangeView }) => 
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-brand-green/90 backdrop-blur-sm border-b border-brand-green-light py-4 border-b">
-      <div className="max-w-4xl mx-auto flex justify-center items-center gap-4 sm:gap-8">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-[#091510]/95 shadow-[0_2px_10px_rgba(0,0,0,0.5)] border-b border-[#1b3d2b]">
+      <div className="w-full mx-auto flex justify-center items-center gap-4 sm:gap-6 py-4">
         {tabs.map((tab, index) => (
           <React.Fragment key={tab.id}>
             <button
               onClick={() => onChangeView(tab.id)}
-              className={`nav-link ${currentView === tab.id ? 'active' : ''}`}
+              className={`nav-link font-sans ${currentView === tab.id ? 'active' : ''}`}
             >
               {tab.label}
             </button>
             {index < tabs.length - 1 && (
-              <span className="text-gray-600 select-none">|</span>
+              <span className="text-[#3a5a4a] select-none text-sm">|</span>
             )}
           </React.Fragment>
         ))}
